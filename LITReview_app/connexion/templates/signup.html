@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if form.errors %}
+	{{ form.errors }}
+{% endif %}
+<div class="errorlist">{{ error_msg }}</div>
+<div id="subscribe">
+	<form method="post">
+		{% csrf_token %}
+		<div class="signup">
+			<div class="content">
+				<p><strong> Inscrivez-vous :</strong></p>
+				<p>{{ form.username }}</p>
+				<p>{{ form.password1 }}</p>
+				<p>{{ form.password2 }}</p>
+				<div class="double_btn">
+					<button type="button" class="space_btn"><a href="{% url 'login' %}"> Retour </a></button>
+					<button type="submit"> S’inscrire </button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+{% endblock content %}

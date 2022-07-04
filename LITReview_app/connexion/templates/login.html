@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if form.errors %}
+   {{ form.errors }}
+{% endif %}
+<div class="errorlist">{{ error_msg }}</div>
+<form method="post">
+	{% csrf_token %}
+	<div class="connexion">
+		<div class="subscribe">
+			<p><strong>Inscrivez-vous ici :</strong></p>
+			<button type="button"><a href="{% url 'signup' %}"> S'inscrire </a></button>
+		</div>
+		<div class="content">
+			<p><strong>Connectez-vous ici :</strong></p>
+			<p>{{ form.username }}</p>
+			<p>{{ form.password }}</p>
+			<button type="submit" > Se connecter </button>
+		</div>
+	</div>
+</form>
+{% endblock content %}
