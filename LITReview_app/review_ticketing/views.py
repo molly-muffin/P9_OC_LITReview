@@ -185,7 +185,7 @@ def edit_autoreview(request, obj_id):
 	"""	Get post's id edit post if is an autoreview """
 
 	obj = AutoReview.objects.get(id=obj_id)
-	form = AutoReviewForm
+	form = ReviewForm
 	html = "review_ticketing/edit_review.html"
 	edit_form = form(instance=obj)
 	if request.method == "POST":
@@ -222,7 +222,10 @@ def delete_review(request, obj_id):
 	if request.method == "POST":
 		delete_form = DeletePostForm(request.POST)
 		if delete_form.is_valid():
-			if isinstance(obj, Ticket):
+			if isinstance(obj, Review):
+				#ticket = Ticket.objects.get(id=ticket_id)
+				#ticket.review_existing = True
+				#ticket.save()
 				obj.ticket.review_existing = False
 				obj.ticket.save()
 			obj.delete()
@@ -241,7 +244,7 @@ def delete_autoreview(request, obj_id):
 	if request.method == "POST":
 		delete_form = DeletePostForm(request.POST)
 		if delete_form.is_valid():
-			if isinstance(obj, Ticket):
+			if isinstance(obj, Review):
 				obj.ticket.review_existing = False
 				obj.ticket.save()
 			obj.delete()
