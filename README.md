@@ -53,7 +53,7 @@ Voici les différentes pages du site :
 	```
 	- Dans ce projet
 	```bash
-	cd LITReview_app\
+	cd P9_LITReview\LITReview_app\
 	```
 	- Créer un environnement virtuel
 	```bash
