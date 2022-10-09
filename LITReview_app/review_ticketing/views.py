@@ -148,7 +148,7 @@ def unfollow(request, user_follows_id):
 
 @login_required
 def edit_ticket(request, obj_id):
-	"""	Get post's id edit post if is a ticket, review or autoreview """
+	"""	Get post's id edit post if is a ticket """
 
 	obj = Ticket.objects.get(id=obj_id)
 	form = TicketForm
@@ -165,7 +165,7 @@ def edit_ticket(request, obj_id):
 
 @login_required
 def edit_review(request, obj_id):
-	"""	Get post's id edit post if is a ticket, review or autoreview """
+	"""	Get post's id edit post if is a review """
 
 	obj = Review.objects.get(id=obj_id)
 	form = ReviewForm
@@ -182,7 +182,7 @@ def edit_review(request, obj_id):
 
 @login_required
 def edit_autoreview(request, obj_id):
-	"""	get post's id edit post if is a ticket, review or autoreview """
+	"""	Get post's id edit post if is an autoreview """
 
 	obj = AutoReview.objects.get(id=obj_id)
 	form = AutoReviewForm
@@ -199,7 +199,7 @@ def edit_autoreview(request, obj_id):
 
 @login_required
 def delete_ticket(request, obj_id):
-	"""	get post's id delete post if is a ticket """
+	"""	Get post's id delete post if is a ticket """
 
 	obj = Ticket.objects.get(id=obj_id)
 	delete_form = DeletePostForm()
@@ -207,9 +207,6 @@ def delete_ticket(request, obj_id):
 	if request.method == "POST":
 		delete_form = DeletePostForm(request.POST)
 		if delete_form.is_valid():
-			if isinstance(obj, Review):
-				obj.ticket.review_existing = False
-				obj.ticket.save()
 			obj.delete()
 			return redirect("posts")
 	context = {"delete_form": delete_form,}
@@ -217,7 +214,7 @@ def delete_ticket(request, obj_id):
 
 @login_required
 def delete_review(request, obj_id):
-	"""	get post's id delete post if is a review """
+	"""	Get post's id delete post if is a review """
 
 	obj = Review.objects.get(id=obj_id)
 	delete_form = DeletePostForm()
@@ -225,7 +222,7 @@ def delete_review(request, obj_id):
 	if request.method == "POST":
 		delete_form = DeletePostForm(request.POST)
 		if delete_form.is_valid():
-			if isinstance(obj, Review):
+			if isinstance(obj, Ticket):
 				obj.ticket.review_existing = False
 				obj.ticket.save()
 			obj.delete()
@@ -236,7 +233,7 @@ def delete_review(request, obj_id):
 
 @login_required
 def delete_autoreview(request, obj_id):
-	"""	get post's id delete post if is an autoreview """
+	"""	Get post's id delete post if is an autoreview """
 
 	obj = AutoReview.objects.get(id=obj_id)
 	delete_form = DeletePostForm()
@@ -244,7 +241,7 @@ def delete_autoreview(request, obj_id):
 	if request.method == "POST":
 		delete_form = DeletePostForm(request.POST)
 		if delete_form.is_valid():
-			if isinstance(obj, Review):
+			if isinstance(obj, Ticket):
 				obj.ticket.review_existing = False
 				obj.ticket.save()
 			obj.delete()
