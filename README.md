@@ -1,4 +1,4 @@
-![Alt text](https://github.com/molly-muffin/P9_LITReview/blob/main/LITReview_app/connexion/static/logo.png)
+![Alt text](https://github.com/molly-muffin/P9_LITReview/blob/1999fd90339998c96009dd2a22ec897284fde6e0/LITReview_app/connexion/static/connexion/logo.png)
 
 # Gestionnaire de demandes de critiques de livres
 
