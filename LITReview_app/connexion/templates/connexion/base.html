@@ -3,21 +3,21 @@
 <html lang="fr">
 <head>
 	<title>LITReview</title>
-	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<link rel="stylesheet" href="{% static 'connexion/style.css' %}">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 	<header>
 		<ul class="head-style">
-			<li id="logo"><img src= "{% static 'logo.png' %}" alt="logo"></li>
+			<li id="logo"><img src= "{% static 'connexion/logo.png' %}" alt="logo"></li>
 		</ul>
 	</header>
-	<div class="trait"></div>
+	<div class="white-line"></div>
 	{% block content %}
 	{% endblock content %}
 	
 	{% if user.is_authenticated %}
 	{% endif %}
-	<div class="trait"></div>
+	<div class="white-line"></div>
 </body>
 </html>

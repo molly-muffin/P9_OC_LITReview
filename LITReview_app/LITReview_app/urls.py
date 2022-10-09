@@ -20,12 +20,11 @@ Including another URLconf
 """
 
 urlpatterns = [
-	path('admin/', admin.site.urls),
-	path("connexion", include("connexion.urls")),
-	path("login", include("connexion.urls")),
+	path("admin/", admin.site.urls, name="admin"),
+	path("connexion/", include("connexion.urls")),
+	path("login/", include("connexion.urls")),
 	path("", include("connexion.urls")),
-	path("review_ticketing", include("review_ticketing.urls"))
+	path("review_ticketing/", include("review_ticketing.urls"))
 ]
 if settings.DEBUG:
-	urlpatterns += static(
-		settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

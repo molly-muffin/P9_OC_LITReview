@@ -1,0 +1,36 @@
+{% extends 'review_ticketing/base.html' %}
+{% block content %}
+	<h2 class="title">Modifier votre critique</h2>
+	<form method="post" enctype="multipart/form-data">
+		<div class="grid-container">
+			<div class="post post-modif">
+				{% csrf_token %}
+				<p>Vous êtes en train de poster en réponse à</p>
+				<div class="ticket_in_review">
+					<p class="date">{{ post.time_created }}</p>
+					<p>Ticket - <strong>Vous</strong></p>
+					<p>{{ post.ticket.title }}</p>
+					<p>{{ post.ticket.description }}</p>
+					{% if post.ticket.image %}
+						<img src="{{ post.ticket.image.url }}" alt="ticket-img">
+					{% endif %}
+				</div>
+				<br>
+				<div class="grey-line"><hr></div>
+				<p class="onglet">Critique</p>
+				<p>Titre</p>
+				<p class="champs">{{ edit_form.headline }}</p>
+				<p>Note</p>
+				{% for rate in edit_form.rating %}
+					{{ rate }}
+				{% endfor %}
+				<p>Commentaire</p>
+				<p class="champs">{{ edit_form.body }}</p>
+				<div class="grey-line"><hr></div>
+				<div class="save">
+					<button class="save-btn" type="submit">Enregistrer</button>
+				</div>
+			</div>
+		</div>
+	</form>
+{% endblock content %}

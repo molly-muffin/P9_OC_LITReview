@@ -1,0 +1,31 @@
+{% extends 'review_ticketing/base.html' %}
+{% block content %}
+	<div class="post create_autoreview">
+		<h2>Créer une critique</h2>
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<p>Titre</p>
+			<p>{{ auto_review_form.title }}</p>
+			<p>Description</p>
+			<p>{{ auto_review_form.description }}</p>
+			<p>Image du livre ou de l'article</p>
+			<div class="dl-btn3">
+				<p>Télécharger &#8594; {{ auto_review_form.image }}</p>
+			</div>
+			<div class="grey-line"><hr></div>
+			<p class="onglet">Critique</p>
+			<p>Titre</p>
+			<p class="champs">{{ auto_review_form.headline }}</p>
+			<p>Note</p>
+			{% for rate in auto_review_form.rating %}
+				{{ rate }}
+			{% endfor %}
+			<p>Commentaire</p>
+			<p class="champs">{{ auto_review_form.body }}</p>
+			<div class="grey-line"><hr></div>
+			<div class="save">
+				<button class="save-btn" type="submit">Enregistrer</button>
+			</div>
+		</form>
+	</div>
+{% endblock content %}

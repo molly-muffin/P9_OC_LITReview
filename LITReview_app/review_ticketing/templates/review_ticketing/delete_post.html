@@ -1,0 +1,15 @@
+{% extends 'review_ticketing/base.html' %}
+{% block content %}
+	<h2 class="title">Supprimer la publication</h2>
+	<form method="post">
+		<div class="grid-container">
+			<div class="post post-sup">
+				{{ delete_form }}
+				{% csrf_token %}
+				<p>Êtes vous sûr de vouloir supprimer ce post ?</p>
+				<br>
+				<button class="delete-btn" type="submit">Supprimer</button>
+			</div>
+		</div>
+	</form>
+{% endblock content %}

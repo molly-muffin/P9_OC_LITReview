@@ -3,6 +3,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from . import forms
 
+def admin_page(request):
+	""" Redirection vers le panel admin	"""
+	return redirect(settings.LOGIN_ADMIN_URL)
 
 def logout_page(request):
 	""" Déconnecter l'utilisateur et le rediriger vers la page de connexion. """
@@ -22,10 +25,13 @@ def login_page(request):
 				password=form.cleaned_data["password"])
 			if user is not None:
 				login(request, user)
-				return redirect("flux")
+				if user.is_superuser:
+					return redirect("admin")
+				else:
+					return redirect("flux")
 			else:
 				error_msg = "Identifiant ou mot de passe invalide."
-	return render(request,"login.html", context={"form": form, "error_msg": error_msg})
+	return render(request,"connexion/login.html", context={"form": form, "error_msg": error_msg})
 
 
 def signup_page(request):
@@ -38,4 +44,4 @@ def signup_page(request):
 			# Connexion automatique de l'utilisateur à la page de flux.
 			login(request, user)
 			return redirect(settings.LOGIN_REDIRECT_URL)
-	return render(request, "signup.html", context={"form": form})
+	return render(request, "connexion/signup.html", context={"form": form})

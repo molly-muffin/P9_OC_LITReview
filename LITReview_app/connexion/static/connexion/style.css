@@ -25,6 +25,31 @@ body {
 	margin-top: 15px;
 }
 
+/* Style de trait */
+.white-line {
+	margin: 30px;
+	width: 464px;
+	height: 1px;
+	overflow: hidden;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Style des erreurs */
+.errorlist {
+	text-align: left;
+	overflow: hidden;
+	font-weight: bold;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	color: black;
+	font-size: 17px
+}
+
 /* Style de la partie inscription sur la page de connexion */
 .subscribe {
 	padding: 50px 35px 0px 35px;
@@ -70,7 +95,7 @@ body {
 	font-size: 15px;
 	width: auto;
 	height: 35px;
-	border-radius: 7px;
+	border-radius: 10px;
 	box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 	border: 0.9mm solid rgba(121,91,35,1);
 	background-color: white;
@@ -93,29 +118,4 @@ body {
 .space_btn {
 	margin-right: 15px;
 	margin-left: 35px;
-}
-
-/* Style de trait */
-.trait {
-	margin: 30px;
-	width: 464px;
-	height: 1px;
-	overflow: hidden;
-	background-color: white;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/* Style des erreurs */
-.errorlist {
-	text-align: left;
-	overflow: hidden;
-	font-weight: bold;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	max-width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-	color: black;
-	font-size: 17px
 }

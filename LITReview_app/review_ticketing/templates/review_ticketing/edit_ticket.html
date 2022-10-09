@@ -1,0 +1,24 @@
+{% extends 'review_ticketing/base.html' %}
+{% block content %}
+	<h2 class="title">Modifier le ticket</h2>
+	<form method="post" enctype="multipart/form-data">
+		<div class="grid-container">
+			<div class="post post-modif">
+				{% csrf_token %}
+				<p>Titre</p>
+				<p class="champs">{{ edit_form.title }}</p>
+				<p>Description</p>
+				<p class="champs">{{ edit_form.description }}</p>
+				<p>Image</p>
+				{% if edit_form.image.value.url != None %}
+					<img src="{{ edit_form.image.value.url }}" alt="post-img">
+				{% endif %}
+				<div class="dl-btn"><p>Télécharger &#8594; {{ edit_form.image }}</p></div>
+				<div class="save">
+					<button class="save-btn" type="submit" >Envoyer</button>
+				</div>
+			</div>
+		</div>
+	</form>
+{% endblock content %}
+
