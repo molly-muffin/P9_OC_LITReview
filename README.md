@@ -45,22 +45,21 @@ Voici les différentes pages du site :
 
 
 ### Instruction d’installation et d’utilisation :
-*    Prérequis
-
-    -   Dans le terminal, aller dans le dossier ou vous souhaitez placer le projet. 
-    -   Copiez le projet 
+- Prérequis
+    - Dans le terminal, aller dans le dossier ou vous souhaitez placer le projet. 
+    - Copiez le projet 
     ```bash
     git clone https://github.com/molly-muffin/P9_LITReview.git
     ```
-    -   Dans ce projet
+    - Dans ce projet
     ```bash
     cd P9_LITReview\LITReview_app\
     ```
-    -   Créer un environnement virtuel
+    - Créer un environnement virtuel
     ```bash
     python -m venv env
     ```
-    -   Activer le script
+    - Activer le script
     Windows :
     ```bash
     .\env\Scripts\activate
@@ -69,12 +68,12 @@ Voici les différentes pages du site :
     ```bash
     source env\bin\activate
     ```
-    -   Installer les packages dans le requirements.txt
+    - Installer les packages dans le requirements.txt
     ```bash
     pip install -r requirements.txt
     ```
 
-*    Lancement
+- Lancement
     - Lancer le  **serveur local**, avec la commande
     ```bash
     python manage.py runserver
