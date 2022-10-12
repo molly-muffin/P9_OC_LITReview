@@ -50,7 +50,7 @@ Voici les différentes pages du site :
     ```bash
     git clone https://github.com/molly-muffin/P9_LITReview.git
     ```
-    - Dans ce dossier
+    - Aller dans ce dossier
     ```bash
     cd P9_LITReview\LITReview_app\
     ```
