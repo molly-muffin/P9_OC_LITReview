@@ -46,12 +46,11 @@ Voici les différentes pages du site :
 
 ### Instruction d’installation et d’utilisation :
 - Prérequis
-    - Dans le terminal, aller dans le dossier ou vous souhaitez placer le projet. 
-    - Copiez le projet 
+    - Dans le terminal, aller dans le dossier ou vous souhaitez placer le projet et copier le projet 
     ```bash
     git clone https://github.com/molly-muffin/P9_LITReview.git
     ```
-    - Dans ce projet
+    - Dans ce dossier
     ```bash
     cd P9_LITReview\LITReview_app\
     ```
@@ -60,6 +59,7 @@ Voici les différentes pages du site :
     python -m venv env
     ```
     - Activer le script
+    
     Windows :
     ```bash
     .\env\Scripts\activate
