@@ -59,6 +59,7 @@ Voici les différentes pages du site :
     python -m venv env
     ```
     - Activer le script
+    
     **Windows :**
     ```bash
     .\env\Scripts\activate
