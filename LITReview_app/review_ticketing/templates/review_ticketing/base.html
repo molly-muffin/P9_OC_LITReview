@@ -1,27 +1,27 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<title>LITReview</title>
-		<link rel="stylesheet" href="{% static 'review_ticketing/style.css' %}">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	</head>
-	<body>
-		<header>
-				<ul class="head-style">
-					<li id="logo"><img src="{% static 'review_ticketing/logo.png' %}" alt="logo"></li>
-					<li id="espace"></li>
-					<li class="menu"><a href="{% url 'flux' %}">Flux</a></li>
-					<li class="menu"><a href="{% url 'posts' %}">Posts</a></li>
-					<li class="menu"><a href="{% url 'subscription' %}">Abonnements</a></li>
-					<li id="espace"></li>
-					<li class="menu"><a href="{% url 'logout' %}">Se déconnecter</a></li>
-				</ul>
-		 </header>
-		{% if user.is_authenticated %}
-			<p id="id_connect">Connecté en tant que <strong>{{ request.user }}</strong></p>
-		{% endif %}
-		<div class="white-line"><hr></div>
-		{% block content %}{% endblock content %}
-	</body>
+    <head>
+        <title>LITReview</title>
+        <link rel="stylesheet" href="{% static 'review_ticketing/style.css' %}">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <header>
+                <ul class="head-style">
+                    <li id="logo"><img src="{% static 'review_ticketing/logo.png' %}" alt="logo"></li>
+                    <li id="espace"></li>
+                    <li class="menu"><a href="{% url 'flux' %}">Flux</a></li>
+                    <li class="menu"><a href="{% url 'posts' %}">Posts</a></li>
+                    <li class="menu"><a href="{% url 'subscription' %}">Abonnements</a></li>
+                    <li id="espace"></li>
+                    <li class="menu"><a href="{% url 'logout' %}">Se déconnecter</a></li>
+                </ul>
+         </header>
+        {% if user.is_authenticated %}
+            <p id="id_connect">Connecté en tant que <strong>{{ request.user }}</strong></p>
+        {% endif %}
+        <div class="white-line"><hr></div>
+        {% block content %}{% endblock content %}
+    </body>
 </html>

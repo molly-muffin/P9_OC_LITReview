@@ -1,212 +1,212 @@
 /* Style de la page */
 * {
-	font-family: "Verdana", "Arial", "Arial Black", Arial, Verdana, sans-serif;
-	text-decoration: none;
+    font-family: "Verdana", "Arial", "Arial Black", Arial, Verdana, sans-serif;
+    text-decoration: none;
 }
 
 body {
-	background-image: linear-gradient(0deg, rgba(103,103,103,1) 0%, rgba(138,138,138,1) 50%, rgba(103,103,103,1) 100%);
-	background-attachment: fixed;
+    background-image: linear-gradient(0deg, rgba(103, 103, 103, 1) 0%, rgba(138, 138, 138, 1) 50%, rgba(103, 103, 103, 1) 100%);
+    background-attachment: fixed;
 }
 
 
 /* Style du haut de page */
 .head-style {
-	height: 75px;
-	background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(80,78,78,1) 50%, rgba(121,91,35,1) 100%);
-	border-radius: 20px;
-	display: flex;
-	list-style-type: none;
-	justify-content: center;
-	line-height: 50px;
+    height: 75px;
+    background: linear-gradient(0deg, rgba(44, 44, 44, 1) 0%, rgba(80, 78, 78, 1) 50%, rgba(121, 91, 35, 1) 100%);
+    border-radius: 20px;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    line-height: 50px;
 }
 
 .head-style img {
-	height: 45px;
-	margin-top: 15px;
+    height: 45px;
+    margin-top: 15px;
 }
 
 .head-style a {
-	color: white;
-	font-size: 17px;
+    color: white;
+    font-size: 17px;
 }
 
 
 /* Style du menu */
 .head-style #espace {
-	padding-left: 50px;
+    padding-left: 50px;
 }
 
 .menu {
-	margin-top: 10px;
-	margin-left: 50px;
+    margin-top: 10px;
+    margin-left: 50px;
 }
 
 .menu:hover {
-	font-weight: bold;
-	font-style: italic;
+    font-weight: bold;
+    font-style: italic;
 }
 
 #id_connect {
-	text-align: right;
-	margin-right: 100px;
-	margin-top: 20px;
-	color: black;
+    text-align: right;
+    margin-right: 100px;
+    margin-top: 20px;
+    color: black;
 }
 
 
 /* Style de traits */
 .white-line {
-	margin: 30px;
-	width: 464px;
-	height: 1px;
-	overflow: hidden;
-	background-color: white;
-	margin-left: auto;
-	margin-right: auto;
+    margin: 30px;
+    width: 464px;
+    height: 1px;
+    overflow: hidden;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grey-line {
-	margin: 30px;
-	height: 1px;
-	overflow: hidden;
-	background-color: grey;
-	margin-left: auto;
-	margin-right: auto;
+    margin: 30px;
+    height: 1px;
+    overflow: hidden;
+    background-color: grey;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 /* Style des erreurs */
 .errorlist {
-	text-align: left;
-	overflow: hidden;
-	font-weight: bold;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	max-width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-	color: black;
-	font-size: 17px
+    text-align: left;
+    overflow: hidden;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    font-size: 17px
 }
 
 
 /* Style de la page de flux & posts */
 h2 {
-	text-align: center;
-	margin-top: 5px;
-	margin-bottom: 5px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 h4 {
-	margin-bottom: 10px;
-	padding-top: 0px;
-	margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 0px;
+    margin-top: 5px;
 }
 
 
 .post img {
-	margin-bottom: 5px;
-	border-radius: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .logo {
-	text-align: center;
-	display: table-footer-group;
+    text-align: center;
+    display: table-footer-group;
 }
 
 .logo img {
-	height: 50px;
-	max-width: 50px;
+    height: 50px;
+    max-width: 50px;
 }
 
 .ticket_review {
-	justify-content: center;
-	display: flex;
+    justify-content: center;
+    display: flex;
 }
 
 .ticket_review #espace {
-	padding-right: 30px;
-	padding-left: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .ticket_in_review {
-	border: 0.6mm solid rgb(120, 90, 35);
-	background-color: rgba(230, 230, 230);
-	border-radius: 15px;
-	box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.15) inset;
-	padding: 8px 13px 5px 13px;
-	overflow: hidden;
+    border: 0.6mm solid rgb(120, 90, 35);
+    background-color: rgba(230, 230, 230);
+    border-radius: 15px;
+    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.15) inset;
+    padding: 8px 13px 5px 13px;
+    overflow: hidden;
 }
 
 .create_autoreview p {
-	margin-top: 5px;
-	margin-bottom: 15px;
-	overflow: hidden
+    margin-top: 5px;
+    margin-bottom: 15px;
+    overflow: hidden
 }
 
 .post {
-	max-width: 550px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 5px 20px 5px 20px;
-	border-radius: 15px;
-	box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
-	margin-top: 25px;
-	background-image: linear-gradient(to bottom right, white, rgb(208, 213, 212));
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 20px 5px 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 25px;
+    background-image: linear-gradient(to bottom right, white, rgb(208, 213, 212));
 }
 
 .title_review {
-	float: left;
-	margin-right: 10px;
+    float: left;
+    margin-right: 10px;
 }
 
 .date {
-	margin-top: 5px;
-	float: right;
-	font-size: 0.9em;
+    margin-top: 5px;
+    float: right;
+    font-size: 0.9em;
 }
 
 .content {
-	overflow: hidden;
-	position: relative;
-	top: -10px;
+    overflow: hidden;
+    position: relative;
+    top: -10px;
 }
 
-.save, 
+.save,
 .post-sup {
-	text-align: center;
+    text-align: center;
 }
 
 .flux-btn,
 .post-btn {
-	color: black;
-	font-size: 15px;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-radius: 10px;
-	box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-	border: 0.9mm solid rgba(121,91,35,1);
-	background-color: white;
-	cursor: pointer;
+    color: black;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    border: 0.9mm solid rgba(121, 91, 35, 1);
+    background-color: white;
+    cursor: pointer;
 }
 
 .flux-btn:hover,
 .post-btn:hover {
-	box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
-	background-color: rgba(53, 53, 53, 0.6);
-	border: 0.9mm solid rgba(121,91,35,1);
-	color: white;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+    background-color: rgba(53, 53, 53, 0.6);
+    border: 0.9mm solid rgba(121, 91, 35, 1);
+    color: white;
 }
 
 .modif-sup-btn,
 .modif-btn {
-	justify-content: right;
-	display: flex;
-	padding-right: 5px;
-	padding-left: 5px;
+    justify-content: right;
+    display: flex;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 .save-btn,
@@ -215,141 +215,142 @@ h4 {
 .dl-btn,
 .dl-btn2,
 .dl-btn3 {
-	color: black;
-	font-size: 15px;
-	width: 130px;
-	height: 35px;
-	border-radius: 10px;
-	box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
-	border: 0.9mm solid rgba(121,91,35,1);
-	text-align: center;
-	margin-bottom: 10px;
-	background-color: white;
-	position: relative;
+    color: black;
+    font-size: 15px;
+    width: 130px;
+    height: 35px;
+    border-radius: 10px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+    border: 0.9mm solid rgba(121, 91, 35, 1);
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: white;
+    position: relative;
 }
 
 .save-btn1 {
-	top: 15px;
-	margin-bottom: 25px;
+    top: 15px;
+    margin-bottom: 25px;
 }
 
 .dl-btn,
 .dl-btn2,
 .dl-btn3 {
-	width: 275px;
+    width: 400px;
 }
 
 .dl-btn {
-	padding-bottom: 10px;
-	margin-top: 15px;
-	margin-bottom: 35px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 35px;
 }
 
 .dl-btn3 {
-	padding-top: 10px;
+    padding-top: 10px;
 }
 
 .dl-btn2 {
-	top: -105px;
+    top: -105px;
 }
 
-.save-btn:hover, 
-.save-btn1:hover, 
+.save-btn:hover,
+.save-btn1:hover,
 .delete-btn:hover,  
-.dl-btn:hover, 
-.dl-btn2:hover, 
+.dl-btn:hover,
+.dl-btn2:hover,
 .dl-btn3:hover {
-	box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
-	background-color: rgba(53, 53, 53, 0.6);
-	border: 0.9mm solid rgba(121,91,35,1);
-	color: white;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+    background-color: rgba(53, 53, 53, 0.6);
+    border: 0.9mm solid rgba(121, 91, 35, 1);
+    color: white;
 }
+
 .django_btn {
-	width: 119px;
+    width: 255px;
 }
 
 .create_ticket input[type=file] {
-	margin-top: 7px;
+    margin-top: 7px;
 }
 
 p.onglet,
 p.onglet2 {
-	position: relative;
-	top: -10px;
-	font-style: italic;
+    position: relative;
+    top: -10px;
+    font-style: italic;
 }
 
 
 /* Page des abonnements */
 .center {
-	text-align: center;
+    text-align: center;
 }
 
 .unfollow,
 .search,
 .followed {
-	width: 450px;
-	height: 50px;
-	border-radius: 10px;
-	background-color: rgb(209, 205, 202);
-	box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-	border: 0.9mm solid rgb(90, 65, 48);
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-right: auto;
-	margin-left: auto;
+    width: 450px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(209, 205, 202);
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    border: 0.9mm solid rgb(90, 65, 48);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .unfollow_user,
 .search_input {
-	float: left;
-	margin-top: 15px;
-	margin-left: 50px;
-	text-align: center;
+    float: left;
+    margin-top: 15px;
+    margin-left: 50px;
+    text-align: center;
 }
 
 .followed {
-	width: 150px;
+    width: 150px;
 }
 
 .followed_user {
-	margin-top: 15px;
-	text-align: center;
+    margin-top: 15px;
+    text-align: center;
 }
 
 .search_btn,
 .unfollow_btn {
-	margin-top: 10px;
-	margin-right: 15px;
-	color: black;
-	font-size: 15px;
-	height: 30px;
-	border-radius: 5px;
-	box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-	border: 0.9mm solid rgb(110, 44, 6);
-	cursor: pointer;
-	text-align: center;
-	float: right;
+    margin-top: 10px;
+    margin-right: 15px;
+    color: black;
+    font-size: 15px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    border: 0.9mm solid rgb(110, 44, 6);
+    cursor: pointer;
+    text-align: center;
+    float: right;
 }
 
 .search_btn {
-	width: 110px;
+    width: 110px;
 }
 
 .unfollow a {
-	width: 150px;
-	color: black;
+    width: 150px;
+    color: black;
 }
 
 .unfollow_btn:hover a {
-	color: white;
+    color: white;
 }
 
-.search_btn:hover, 
+.search_btn:hover,
 .unfollow_btn:hover
  {
-	box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
-	background-color: black;
-	border: 0.9mm solid rgb(102, 2, 28);
-	color: white;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+    background-color: black;
+    border: 0.9mm solid rgb(102, 2, 28);
+    color: white;
 }

@@ -1,34 +1,34 @@
 {% extends 'review_ticketing/base.html' %}
 {% block content %}
-	<div class="post create_autoreview">
-		<h2>Créer une critique</h2>
-		<form method="post" enctype="multipart/form-data">
-			{% csrf_token %}
-			<p>Vous êtes en train de poster en réponse à</p>
-			<div class="ticket_in_review">
-				<p class="date">{{ ticket.time_created }}</p>
-				<p><strong>{{ ticket.user }}</strong> a demandé une critique</p>
-				<p>{{ ticket.title }}</p>
-				<p>{{ ticket.description }}</p>
-				{% if ticket.image %}
-					<img src="{{ ticket.image.url }}" alt="ticket-img">
-				{% endif %}
-			</div>
-			<br>
-			<div class="grey-line"><hr></div>
-			<p class="onglet2">Critique</p>
-			<p>Titre</p>
-			<p class="champs">{{ review_form.headline }}</p>
-			<p>Note</p>
-			{% for rate in review_form.rating %}
-				{{ rate }}
-			{% endfor %}
-			<p>Commentaire</p>
-			<p class="champs">{{ review_form.body }}</p>
-			<div class="grey-line"><hr></div>
-			<div class="save">
-				<button class="save-btn" type="submit">Enregistrer</button>
-			</div>
-		</form>
-	</div>
+    <div class="post create_autoreview">
+        <h2>Créer une critique</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>Vous êtes en train de poster en réponse à</p>
+            <div class="ticket_in_review">
+                <p class="date">{{ ticket.time_created }}</p>
+                <p><strong>{{ ticket.user }}</strong> a demandé une critique</p>
+                <p>{{ ticket.title }}</p>
+                <p>{{ ticket.description }}</p>
+                {% if ticket.image %}
+                    <img src="{{ ticket.image.url }}" alt="ticket-img">
+                {% endif %}
+            </div>
+            <br>
+            <div class="grey-line"><hr></div>
+            <p class="onglet2">Critique</p>
+            <p>Titre</p>
+            <p class="champs">{{ review_form.headline }}</p>
+            <p>Note</p>
+            {% for rate in review_form.rating %}
+                {{ rate }}
+            {% endfor %}
+            <p>Commentaire</p>
+            <p class="champs">{{ review_form.body }}</p>
+            <div class="grey-line"><hr></div>
+            <div class="save">
+                <button class="save-btn" type="submit">Enregistrer</button>
+            </div>
+        </form>
+    </div>
 {% endblock content %}

@@ -1,19 +1,19 @@
 {% extends 'review_ticketing/base.html' %}
 {% block content %}
-	<div class="post">
-		<h2>Demander une critique</h2>
-		<form method="post" enctype="multipart/form-data">
-			{% csrf_token %}
-			<p>Titre</p>
-			<p>{{ ticket_form.title }}</p>
-			<p>Description</p>
-			<p>{{ ticket_form.description }}</p>
-			<p>Image du livre ou de l'article</p>
-			<div class="dl-btn3">Télécharger &#8594; {{ ticket_form.image }}
-			</div>
-			<div class="save">
-				<button class="save-btn1" type="submit">Enregister</button>
-			</div>
-		</form>
-	</div>
+    <div class="post">
+        <h2>Demander une critique</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>Titre</p>
+            <p>{{ ticket_form.title }}</p>
+            <p>Description</p>
+            <p>{{ ticket_form.description }}</p>
+            <p>Image du livre ou de l'article</p>
+            <div class="dl-btn3">Télécharger &#8594; {{ ticket_form.image }}
+            </div>
+            <div class="save">
+                <button class="save-btn1" type="submit">Enregister</button>
+            </div>
+        </form>
+    </div>
 {% endblock content %}

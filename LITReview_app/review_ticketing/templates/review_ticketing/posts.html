@@ -3,108 +3,108 @@
 {% block content %}
 
 <form method="post" enctype="multipart/form-data">
-	{% csrf_token %}
+    {% csrf_token %}
 
-	<div class="grid-container">
-		{% for post in posts %}
-			{% if post.content_type == 'TICKET' and post.user == request.user %}
-			<!-- TICKET !-->
-				<div class="post">
-					<p class="date">{{ post.time_created }}</p>
-					<p><strong>Vous</strong> avez publié un ticket</p>
-					<h4>{{ post.title }}</h4>
-					<p class="content">{{ post.description | safe }}</p>
-					{% if post.image %}
-						<img src="{{ post.image.url }}" alt="post-img">
-					{% endif %}
-					<div class="modif-sup-btn">
-						<p class="ticket_review modif-btn">
-							<a href="{% url 'edit_ticket' post.id %}" class="post-btn">Modifier</a></p>
-						<p class="ticket_review modif-btn">
-							<a href="{% url 'delete_ticket' post.id %}" class="post-btn">Supprimer</a></p>
-					</div>
-				</div>
-			{% elif post.content_type == 'REVIEW' and post.user == request.user %}
-			<!-- REVIEW !-->
-				<div class="post">
-					<p class="date">{{ post.time_created }}</p>
-					{% if post.user == request.user %}
-						<p><strong>Vous</strong> avez publié une critique</p>
-					{% else %}
-						<p><strong>{{ post.user }}</strong> a publié une critique</p>
-					{% endif %}
-						<div class="title_review"> <h4>{{ post.headline }}</h4></div>
-						{% if post.rating == 0 %}
-							<div class="rating"><p> - &#9734;&#9734;&#9734;&#9734;&#9734;<p></div>
-						{% elif post.rating == 1 %}
-							<div class="rating"><p> - &#9733;&#9734;&#9734;&#9734;&#9734;<p></div>
-						{% elif post.rating == 2 %}
-							<div class="rating"><p> - &#9733;&#9733;&#9734;&#9734;&#9734;<p></div>
-						{% elif post.rating == 3 %}
-							<div class="rating"><p> - &#9733;&#9733;&#9733;&#9734;&#9734;<p></div>
-						{% elif post.rating == 4 %}
-							<div class="rating"><p> - &#9733;&#9733;&#9733;&#9733;&#9734;<p></div>
-						{% elif post.rating == 5 %}
-							<div class="rating"><p> - &#9733;&#9733;&#9733;&#9733;&#9733;<p></div>
-						{% endif %}
-						<p class="content">{{ post.body | safe }}</p>
-						<div class="content ticket_in_review">
-						<p class="date">{{ post.ticket.time_created }}</p>
-						<a class="logo"><img src="{% static 'review_ticketing/book.png' %}"></a>
-						<a class="logo"><strong>{{ post.ticket.user }}</strong></a>
-						<p>{{ post.ticket.title }}</p>
-						<p>{{ post.ticket.description }}</p>
-						{% if post.ticket.image %}
-							<img src="{{ post.ticket.image.url }}" alt="ticket-img">
-						{% endif %}
-						<div class="modif-sup-btn">
-							<p class="ticket_review modif-btn">
-								<a href="{% url 'edit_review' post.id %}" class="post-btn">Modifier</a></p>
-							<p class="ticket_review modif-btn">
-								<a href="{% url 'delete_review' post.id %}" class="post-btn">Supprimer</a></p>
-						</div>
-					</div>
-				</div>
-				{% elif post.content_type == 'AUTOREVIEW' and post.user == request.user %}
-				<!-- AUTOREVIEW !-->
-				<div class="post">
-					 <p class="date">{{ post.time_created }}</p>
-					 <p><strong>Vous</strong> avez publié une critique</p>
-						<div class="title_review"> <h4>{{ post.headline }}</h4></div>
-						{% if post.rating == 0 %}
-							<div class="rating"><p> - &#9734;&#9734;&#9734;&#9734;&#9734;<p></div>
-						{% elif post.rating == 1 %}
-							<div class="rating"><p> - &#9733;&#9734;&#9734;&#9734;&#9734;<p></div>
-						{% elif post.rating == 2 %}
-							<div class="rating"><p> - &#9733;&#9733;&#9734;&#9734;&#9734;<p></div>
-						{% elif post.rating == 3 %}
-							<div class="rating"><p> - &#9733;&#9733;&#9733;&#9734;&#9734;<p></div>
-						{% elif post.rating == 4 %}
-							<div class="rating"><p> - &#9733;&#9733;&#9733;&#9733;&#9734;<p></div>
-						{% elif post.rating == 5 %}
-							<div class="rating"><p> - &#9733;&#9733;&#9733;&#9733;&#9733;<p></div>
-						{% endif %}
-					<p class="content">{{ post.body | safe }}</p>
-					<div class="content ticket_in_review">
-						<p class="date">{{ post.time_created }}</p>
-						<a class="logo"><img src="{% static 'review_ticketing/book.png' %}"></a>
-						<a class="logo"><strong>Vous</strong></a>
-						<p>{{ post.ticket.title }}</p>
-						<p>{{ post.ticket.description }}</p>
-						{% if post.ticket.image %}
-							<img src="{{ post.ticket.image.url }}" alt="ticket-img">
-						{% endif %}
-					</div>
-						<div class="modif-sup-btn">
-							<p class="ticket_review modif-btn">
-								<a href="{% url 'edit_autoreview' post.id %}" class="post-btn">Modifier</a></p>
-							<p class="ticket_review modif-btn">
-								<a href="{% url 'delete_autoreview' post.id %}" class="post-btn">Supprimer</a></p>
-						</div>
-				</div>
-			{% endif %}
-		{% endfor %}
-	</div>
+    <div class="grid-container">
+        {% for post in posts %}
+            {% if post.content_type == 'TICKET' and post.user == request.user %}
+            <!-- TICKET !-->
+                <div class="post">
+                    <p class="date">{{ post.time_created }}</p>
+                    <p><strong>Vous</strong> avez publié un ticket</p>
+                    <h4>{{ post.title }}</h4>
+                    <p class="content">{{ post.description | safe }}</p>
+                    {% if post.image %}
+                        <img src="{{ post.image.url }}" alt="post-img">
+                    {% endif %}
+                    <div class="modif-sup-btn">
+                        <p class="ticket_review modif-btn">
+                            <a href="{% url 'edit_ticket' post.id %}" class="post-btn">Modifier</a></p>
+                        <p class="ticket_review modif-btn">
+                            <a href="{% url 'delete_ticket' post.id %}" class="post-btn">Supprimer</a></p>
+                    </div>
+                </div>
+            {% elif post.content_type == 'REVIEW' and post.user == request.user %}
+            <!-- REVIEW !-->
+                <div class="post">
+                    <p class="date">{{ post.time_created }}</p>
+                    {% if post.user == request.user %}
+                        <p><strong>Vous</strong> avez publié une critique</p>
+                    {% else %}
+                        <p><strong>{{ post.user }}</strong> a publié une critique</p>
+                    {% endif %}
+                        <div class="title_review"> <h4>{{ post.headline }}</h4></div>
+                        {% if post.rating == 0 %}
+                            <div class="rating"><p> - &#9734;&#9734;&#9734;&#9734;&#9734;<p></div>
+                        {% elif post.rating == 1 %}
+                            <div class="rating"><p> - &#9733;&#9734;&#9734;&#9734;&#9734;<p></div>
+                        {% elif post.rating == 2 %}
+                            <div class="rating"><p> - &#9733;&#9733;&#9734;&#9734;&#9734;<p></div>
+                        {% elif post.rating == 3 %}
+                            <div class="rating"><p> - &#9733;&#9733;&#9733;&#9734;&#9734;<p></div>
+                        {% elif post.rating == 4 %}
+                            <div class="rating"><p> - &#9733;&#9733;&#9733;&#9733;&#9734;<p></div>
+                        {% elif post.rating == 5 %}
+                            <div class="rating"><p> - &#9733;&#9733;&#9733;&#9733;&#9733;<p></div>
+                        {% endif %}
+                        <p class="content">{{ post.body | safe }}</p>
+                        <div class="content ticket_in_review">
+                        <p class="date">{{ post.ticket.time_created }}</p>
+                        <a class="logo"><img src="{% static 'review_ticketing/book.png' %}"></a>
+                        <a class="logo"><strong>{{ post.ticket.user }}</strong></a>
+                        <p>{{ post.ticket.title }}</p>
+                        <p>{{ post.ticket.description }}</p>
+                        {% if post.ticket.image %}
+                            <img src="{{ post.ticket.image.url }}" alt="ticket-img">
+                        {% endif %}
+                        <div class="modif-sup-btn">
+                            <p class="ticket_review modif-btn">
+                                <a href="{% url 'edit_review' post.id %}" class="post-btn">Modifier</a></p>
+                            <p class="ticket_review modif-btn">
+                                <a href="{% url 'delete_review' post.id %}" class="post-btn">Supprimer</a></p>
+                        </div>
+                    </div>
+                </div>
+                {% elif post.content_type == 'AUTOREVIEW' and post.user == request.user %}
+                <!-- AUTOREVIEW !-->
+                <div class="post">
+                     <p class="date">{{ post.time_created }}</p>
+                     <p><strong>Vous</strong> avez publié une critique</p>
+                        <div class="title_review"> <h4>{{ post.headline }}</h4></div>
+                        {% if post.rating == 0 %}
+                            <div class="rating"><p> - &#9734;&#9734;&#9734;&#9734;&#9734;<p></div>
+                        {% elif post.rating == 1 %}
+                            <div class="rating"><p> - &#9733;&#9734;&#9734;&#9734;&#9734;<p></div>
+                        {% elif post.rating == 2 %}
+                            <div class="rating"><p> - &#9733;&#9733;&#9734;&#9734;&#9734;<p></div>
+                        {% elif post.rating == 3 %}
+                            <div class="rating"><p> - &#9733;&#9733;&#9733;&#9734;&#9734;<p></div>
+                        {% elif post.rating == 4 %}
+                            <div class="rating"><p> - &#9733;&#9733;&#9733;&#9733;&#9734;<p></div>
+                        {% elif post.rating == 5 %}
+                            <div class="rating"><p> - &#9733;&#9733;&#9733;&#9733;&#9733;<p></div>
+                        {% endif %}
+                    <p class="content">{{ post.body | safe }}</p>
+                    <div class="content ticket_in_review">
+                        <p class="date">{{ post.time_created }}</p>
+                        <a class="logo"><img src="{% static 'review_ticketing/book.png' %}"></a>
+                        <a class="logo"><strong>Vous</strong></a>
+                        <p>{{ post.ticket.title }}</p>
+                        <p>{{ post.ticket.description }}</p>
+                        {% if post.ticket.image %}
+                            <img src="{{ post.ticket.image.url }}" alt="ticket-img">
+                        {% endif %}
+                    </div>
+                        <div class="modif-sup-btn">
+                            <p class="ticket_review modif-btn">
+                                <a href="{% url 'edit_autoreview' post.id %}" class="post-btn">Modifier</a></p>
+                            <p class="ticket_review modif-btn">
+                                <a href="{% url 'delete_autoreview' post.id %}" class="post-btn">Supprimer</a></p>
+                        </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
 </form>
 <div class="white-line"><hr></div>
 {% endblock content %}
