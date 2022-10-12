@@ -62,8 +62,6 @@ Voici les différentes pages du site :
     ```bash
     # Windows :
     .\env\Scripts\activate
-    ```
-    ```bash
     # Linux :
     source env\bin\activate
     ```
