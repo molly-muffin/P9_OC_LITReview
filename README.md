@@ -46,6 +46,7 @@ Voici les différentes pages du site :
 
 ### Instruction d’installation et d’utilisation :
 *    Prérequis
+
     - Dans le terminal, aller dans le dossier ou vous souhaitez placer le projet. 
     - Copiez le projet 
     ```bash
@@ -84,7 +85,7 @@ Voici les différentes pages du site :
 ### Vérification du code
 - Contrôle du code avec **flake8** (avec max lenght à 80), tapez :
 ```bash
-flake8 --max-line-length 80 --format=html --htmldir=flake-report --exclude=migrations
+flake8 --max-line-length 150 --format=html --htmldir=flake-report --exclude=migrations
 ```
 
 
