@@ -59,12 +59,12 @@ Voici les différentes pages du site :
     python -m venv env
     ```
     - Activer le script
-    ```bash
     # Windows :
+    ```bash
     .\env\Scripts\activate
     ```
-    ```bash
     # Linux :
+    ```bash
     source env\bin\activate
     ```
     - Installer les packages dans le requirements.txt
