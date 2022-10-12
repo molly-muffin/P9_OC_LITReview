@@ -59,12 +59,12 @@ Voici les différentes pages du site :
     python -m venv env
     ```
     - Activer le script
-    
-    Windows :
+
+    Windows
     ```bash
     .\env\Scripts\activate
     ```
-    Linux :
+    Linux
     ```bash
     source env\bin\activate
     ```
