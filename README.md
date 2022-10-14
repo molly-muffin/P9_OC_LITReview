@@ -82,9 +82,9 @@ Voici les différentes pages du site :
 
 
 ### Vérification du code
-- Contrôle du code avec **flake8** (avec max lenght à 80), tapez :
+- Contrôle du code avec **flake8** (avec max lenght à 170), tapez :
 ```bash
-flake8 --max-line-length 150 --format=html --htmldir=flake-report --exclude=migrations
+flake8 --max-line-length 170 --format=html --htmldir=flake-report --exclude=migrations
 ```
 
 
